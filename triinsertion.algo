@@ -1,0 +1,18 @@
+ALGORITHM triInsertion 
+VAR
+    T: ARRAY_OF integer[];
+    i,j,v:INTEGER;
+BEGIN
+   FOR i FROM 1 TO T.length-1 STEP 1 DO
+      v=T[i];
+      j:=i-1;
+      WHILE (j>=0 && T[i>v]) DO
+          T[j+1]:=T[j]
+          j--:
+      END_WHILE
+      T[j]:=v;
+   END_FOR
+   FOR i FROM 0 TO T.length-1 STEP 1  DO
+       write(T[i])
+   END_FOR
+END
